@@ -1,0 +1,44 @@
+.circle{
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  height:  80px;
+  margin-left: 20px;
+}
+
+h1{
+  margin-left: 10px;
+}
+
+#rock{
+  background-image: url(images/rock.png);
+  background-size: contain;
+  background-position-y: 10px;
+}
+
+#paper{
+  background-image: url(images/paper.jpg);
+  background-size: contain;
+}
+
+#scissors{
+  background-image: url(images/scissors.jpg);
+  background-size: contain;
+  background-position-y: 20px;
+}
+
+#tracker{
+  border: 2px solid black;
+  width: 300px;
+  height: 300px;
+  margin-top: 30px;
+  text-align: center;
+}
