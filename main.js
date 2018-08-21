@@ -31,20 +31,21 @@ scissors.addEventListener('click', function() {
 })
 
 function winner(user_choice, bot_choice){
+  if (user_choice === bot_choice){
+    win_or_lose.innerHTML = 'Bot: ' + bot_choice + '! Draw!'
+    draws_count++
+    draws.innerHTML = draws_count
+  }
   switch (user_choice){
     case 'rock':
       if (bot_choice == 'scissors'){
         win_or_lose.innerHTML = 'Bot: ' + bot_choice + '! You win!!'
         wins_count++
         wins.innerHTML = wins_count
-      } else if (bot_choice == 'paper'){
+      } else {
         win_or_lose.innerHTML = 'Bot: ' + bot_choice + '! You lose!'
         losses_count++
         losses.innerHTML = losses_count
-      } else {
-        win_or_lose.innerHTML = 'Bot: ' + bot_choice + '! Draw!'
-        draws_count++
-        draws.innerHTML = draws_count
       }
       break
     case 'paper':
@@ -52,30 +53,22 @@ function winner(user_choice, bot_choice){
         win_or_lose.innerHTML = 'Bot: ' + bot_choice + '! You win!!'
         wins_count++
         wins.innerHTML = wins_count
-      } else if (bot_choice == 'scissors'){
+      } else {
         win_or_lose.innerHTML = 'Bot: ' + bot_choice + '! You lose!'
         losses_count++
         losses.innerHTML = losses_count
-      } else {
-        win_or_lose.innerHTML = 'Bot: ' + bot_choice + '! Draw!'
-        draws_count++
-        draws.innerHTML = draws_count
-      }
+      } 
       break
     case 'scissors':
       if (bot_choice == 'paper'){
         win_or_lose.innerHTML = 'Bot: ' + bot_choice + '! You win!!'
         wins_count++
         wins.innerHTML = wins_count
-      } else if (bot_choice == 'rock'){
+      } else {
         win_or_lose.innerHTML = 'Bot: ' + bot_choice + '! You lose!'
         losses_count++
         losses.innerHTML = losses_count
-      } else {
-        win_or_lose.innerHTML = 'Bot: ' + bot_choice + '! Draw!'
-        draws_count++
-        draws.innerHTML = draws_count
-      }
+      } 
       break
   }
 }
